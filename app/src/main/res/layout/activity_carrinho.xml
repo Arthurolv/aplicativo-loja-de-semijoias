@@ -1,0 +1,85 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Cabeçalho Superior -->
+    <LinearLayout
+        android:id="@+id/header_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6A5ACD"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OD Semijoias"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_weight="1"/>
+
+        <!-- Ícone de Carrinho Alinhado à Direita -->
+        <ImageButton
+            android:id="@+id/cart_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Carrinho"
+            android:onClick="abrirPaginaCarrinho"
+            android:src="@drawable/ic_cart" />
+    </LinearLayout>
+
+    <!-- Container para exibir os itens do carrinho -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/header_top"
+        android:layout_above="@id/header_bottom"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/carrinho_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Os itens serão adicionados dinamicamente aqui -->
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Cabeçalho Inferior -->
+    <LinearLayout
+        android:id="@+id/header_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6A5ACD"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <!-- Ícone Home -->
+        <ImageButton
+            android:id="@+id/home_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="voltarParaHome"
+            android:src="@drawable/ic_home"
+            android:contentDescription="Home"/>
+
+        <!-- Ícone de Conta -->
+        <ImageButton
+            android:id="@+id/account_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:onClick="abrirPaginaConta"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_account"
+            android:contentDescription="Conta"/>
+    </LinearLayout>
+
+</RelativeLayout>

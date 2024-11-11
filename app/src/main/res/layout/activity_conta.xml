@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Cabeçalho Superior -->
+    <LinearLayout
+        android:id="@+id/header_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6A5ACD"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OD semijoias"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"/>
+
+        <!-- Ícone de carrinho -->
+        <ImageButton
+            android:id="@+id/cart_icon"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Carrinho"
+            android:onClick="abrirPaginaCarrinho"
+            android:src="@drawable/ic_cart" />
+    </LinearLayout>
+
+    <!-- Conteúdo de Login -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_top"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <!-- Campo de Email -->
+        <EditText
+            android:id="@+id/email_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite seu email"
+            android:inputType="textEmailAddress"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Campo de Senha -->
+        <EditText
+            android:id="@+id/password_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite sua senha"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Botão de Login -->
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:background="#800080"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Mensagem de confirmação de login -->
+        <TextView
+            android:id="@+id/login_confirmation_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Login efetuado com sucesso!"
+            android:textColor="#4CAF50"
+            android:textSize="16sp"
+            android:visibility="gone"/> <!-- Inicialmente invisível -->
+
+
+        <!-- Botão de Cadastro -->
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cadastrar-se"
+            android:onClick="abrirPaginaCadastro"
+            android:background="#800080"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+    <!-- Cabeçalho Inferior -->
+    <LinearLayout
+        android:id="@+id/header_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6A5ACD"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <!-- Ícone Home -->
+        <ImageButton
+            android:id="@+id/home_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="voltarParaHome"
+            android:src="@drawable/ic_home"
+            android:contentDescription="Home"/>
+
+        <!-- Ícone de conta -->
+        <ImageButton
+            android:id="@+id/account_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:onClick="abrirPaginaConta"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_account"
+            android:contentDescription="Conta"/>
+    </LinearLayout>
+
+</RelativeLayout>

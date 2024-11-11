@@ -1,0 +1,498 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Cabeçalho Superior -->
+    <LinearLayout
+        android:id="@+id/header_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6A5ACD"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OD semijoias"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <!-- Ícone de carrinho -->
+        <ImageButton
+            android:id="@+id/cart_icon"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Carrinho"
+            android:onClick="abrirPaginaCarrinho"
+            android:src="@drawable/ic_cart" />
+    </LinearLayout>
+
+
+    <!-- Botões Abaixo do Cabeçalho Superior -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_top"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pulseiras"
+                android:layout_margin="8dp"
+                android:background="#800080"
+                android:textColor="#FFFFFF"
+                android:onClick="abrirPulseirasActivity" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Brincos"
+                android:layout_margin="8dp"
+                android:background="#800080"
+                android:textColor="#FFFFFF"
+                android:onClick="abrirBrincosActivity" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Colares"
+                android:layout_margin="8dp"
+                android:background="#800080"
+                android:textColor="#FFFFFF"
+                android:onClick="abrirColaresActivity" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Anéis"
+                android:layout_margin="8dp"
+                android:background="#800080"
+                android:textColor="#FFFFFF"
+                android:onClick="abrirAneisActivity" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Seção com ScrollView para rolagem -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/header_bottom"
+        android:layout_below="@id/header_top"
+        android:layout_marginTop="172dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Itens com imagens, descrições e botões de favorito -->
+            <!-- Exemplo do Colar -->
+            <!-- Colar -->
+
+            <!-- Pulseira -->
+
+            <LinearLayout
+                android:layout_width="273dp"
+                android:layout_height="334dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/colar_image"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="Imagem do colar"
+                    android:src="@drawable/colar1" />
+
+                <TextView
+                    android:id="@+id/colar_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:text="R$ 120,00"
+                    android:textColor="#FF0000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/colar_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:text="Colar de Ouro com inicial em l - Elegância Clássica"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/favorite_icon_colar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="Favorito"
+                    android:src="@drawable/ic_favorite" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/pulseira_image"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="Imagem da pulseira"
+                    android:src="@drawable/pulseira1" />
+
+                <TextView
+                    android:id="@+id/pulseira_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:text="R$ 80,00"
+                    android:textColor="#FF0000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/pulseira_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:text="Pulseira de Ouro - Design Moderno"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/favorite_icon_pulseira"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="Favorito"
+                    android:src="@drawable/ic_favorite" />
+            </LinearLayout>
+
+            <!-- Brinco -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/brinco_image"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="Imagem do brinco"
+                    android:src="@drawable/brinco1" />
+
+                <TextView
+                    android:id="@+id/brinco_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:text="R$ 50,00"
+                    android:textColor="#FF0000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/brinco_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:text="Brinco de ouro - Estilo Minimalista"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/favorite_icon_brinco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="Favorito"
+                    android:src="@drawable/ic_favorite" />
+            </LinearLayout>
+
+            <!-- Anel -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/anel_image"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="Imagem do anel"
+                    android:src="@drawable/anel1" />
+
+                <TextView
+                    android:id="@+id/anel_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:text="R$ 150,00"
+                    android:textColor="#FF0000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/anel_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:text="Aliança de ouro - Luxo Atemporal"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/favorite_icon_anel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="Favorito"
+                    android:src="@drawable/ic_favorite" />
+            </LinearLayout>
+
+            <!-- colar2 -->
+            <LinearLayout
+                android:layout_width="273dp"
+                android:layout_height="334dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/colar_image2"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="Imagem do colar"
+                    android:src="@drawable/colar2" />
+
+                <TextView
+                    android:id="@+id/colar_price2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:text="R$ 100,00"
+                    android:textColor="#FF0000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/colar_description2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:text="Colar cor prata "
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/favorite_icon_colar2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="Favorito"
+                    android:src="@drawable/ic_favorite" />
+            </LinearLayout>
+
+            <!-- brinco2 -->
+            <LinearLayout
+                android:layout_width="273dp"
+                android:layout_height="334dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/brinco_image2"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="Imagem do colar"
+                    android:src="@drawable/brinco2" />
+
+                <TextView
+                    android:id="@+id/brinco_price2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:text="R$ 50,00"
+                    android:textColor="#FF0000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/brinco_description2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:text="brinco dourado com pedras pratas"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/favorite_icon_brinco2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="Favorito"
+                    android:src="@drawable/ic_favorite" />
+            </LinearLayout>
+
+            <!-- anel2 -->
+            <LinearLayout
+                android:layout_width="273dp"
+                android:layout_height="334dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/anel_image2"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="Imagem do colar"
+                    android:src="@drawable/anel2" />
+
+                <TextView
+                    android:id="@+id/anel_price2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:text="R$ 90,00"
+                    android:textColor="#FF0000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/anel_description2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:text="Anel feminino prata com joia"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/favorite_icon_anel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="Favorito"
+                    android:src="@drawable/ic_favorite" />
+            </LinearLayout>
+
+            <!-- pulseira2 -->
+            <LinearLayout
+                android:layout_width="273dp"
+                android:layout_height="334dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/pulseira_image2"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:contentDescription="Imagem do colar"
+                    android:src="@drawable/pulseira2" />
+
+                <TextView
+                    android:id="@+id/pulseira_price2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:text="R$ 70,00 "
+                    android:textColor="#FF0000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/pulseira_description2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:text="pulseira folheada a ouro dourada "
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/favorite_icon_pulseira2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="Favorito"
+                    android:src="@drawable/ic_favorite" />
+            </LinearLayout>
+
+
+
+
+
+
+            <!-- Outros itens como pulseiras, anéis e brincos seguirão aqui -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Cabeçalho Inferior -->
+    <LinearLayout
+        android:id="@+id/header_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6A5ACD"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <!-- Ícone Home -->
+        <ImageButton
+            android:id="@+id/home_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="voltarParaHome"
+            android:src="@drawable/ic_home"
+            android:contentDescription="Home" />
+
+        <!-- Ícone de conta -->
+        <ImageButton
+            android:id="@+id/account_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:onClick="abrirPaginaConta"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_account"
+            android:contentDescription="Conta" />
+    </LinearLayout>
+
+</RelativeLayout>
